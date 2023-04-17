@@ -1,23 +1,24 @@
-# Requirements
-Make sure that you have the following installed:
-- [node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04) 
-- npm 
-- [MongoDB](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/) and start the mongodb service with `sudo service mongod start`
+## Backend And Client Base Images
+ node:19-alpine - Alpine  is much smaller than most distribution base images hence creates small image sizes
 
-## Navigate to the Client Folder 
- `cd client`
+## DB
+  mongo : for mongo DB
 
-## Run the folllowing command to install the dependencies 
- `npm install`
+## Dockerfile commands/instructions 
 
-## Run the folllowing to start the app
- `npm start`
+ FROM : specifies parent image for docker 
+ WORKDIR : sets working directory for any docker commands run. i.e docker RUN,COPY etc
+ RUN : executes commands during the image build time
+ COPY: copies new files or directories from <src> and adds them to the filesystem of the container at the 
+    path <dest> 
+ EXPOSE : specifies docker listening ports
+ CMD :provides  default initialization command that is executed once a container is created from the Docker image
 
-## Open a new terminal and run the same commands in the backend folder
- `cd ../backend`
+## Docker-compose Networks
 
- `npm install`
+contains frontend and backend tier networks for isolation, security and communication between both layers using different ips/networks
 
- `npm start`
+## Docker Hub
 
- ### Go ahead a nd add a product (note that the price field only takes a numeric input)
+This images runs successfully, pull their images from docker hub link below and test.
+  https://hub.docker.com/search?q=mourice
