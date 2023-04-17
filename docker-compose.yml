@@ -41,4 +41,14 @@ services:
     networks:
       backend-end-network:
         ipv4_address: 172.128.0.3
-
+networks:
+  front-end-network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.127.0.0/16
+  backend-end-network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.128.0.0/16
