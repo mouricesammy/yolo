@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     image: yolo-frontend:latest
     ports:
-      - "3000:3000"k
+      - "3000:3000"
     stdin_open: true
     networks:
       front-end-network:
