@@ -18,9 +18,17 @@
 
 contains frontend and backend tier networks for isolation, security and communication between both layers using different ips/networks.
 the networks are as follows:
+ frontend
   networks:
       front-end-network:
         ipv4_address: 172.127.0.3
+ backend
+  networks:
+      front-end-network:
+        ipv4_address: 172.127.0.2
+      backend-end-network:
+        ipv4_address: 172.128.0.2
+  
 
 ## Docker Hub
 
