@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const multer = require('multer');
@@ -41,7 +42,7 @@ app.use(cors());
 app.use('/api/products', productRoute)
 
 // Define the PORT
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5050
 
 app.listen(PORT, ()=>{
     console.log(`Server listening on port ${PORT}`)
