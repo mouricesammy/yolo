@@ -29,7 +29,10 @@ the networks are as follows:
       backend-end-network:
         ipv4_address: 172.128.0.2
 
-
+ db
+   networks:
+      backend-end-network:
+        ipv4_address: 172.128.0.3
 
 ## Docker Hub
 
