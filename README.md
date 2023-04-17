@@ -16,7 +16,11 @@
 
 ## Docker-compose Networks
 
-contains frontend and backend tier networks for isolation, security and communication between both layers using different ips/networks
+contains frontend and backend tier networks for isolation, security and communication between both layers using different ips/networks.
+the networks are as follows:
+  networks:
+      front-end-network:
+        ipv4_address: 172.127.0.3
 
 ## Docker Hub
 
